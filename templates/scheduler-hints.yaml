@@ -1,0 +1,14 @@
+parameter_defaults:
+  ControllerSchedulerHints:
+    'capabilities:node': 'controller-%index%'
+  NovaComputeSchedulerHints:
+    'capabilities:node': 'compute-%index%'
+  ObjectStorageSchedulerHints:
+    'capabilities:node': 'objectstorage-%index%'
+  HostnameMap:
+    yj23-osp13-19-controller-0: yj23-osp13-con-1
+    yj23-osp13-19-controller-1: yj23-osp13-con-2
+    yj23-osp13-19-controller-2: yj23-osp13-con-3
+    yj23-osp13-19-compute-0: yj23-osp13-com-1
+    yj23-osp13-19-compute-1: yj23-osp13-com-2
+    yj23-osp13-19-objectstorage-0: yj23-osp13-swift-1

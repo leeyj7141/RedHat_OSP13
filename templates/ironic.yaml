@@ -1,0 +1,13 @@
+parameter_defaults:
+    NovaSchedulerDefaultFilters:
+        - RetryFilter
+        - AggregateInstanceExtraSpecsFilter
+        - AvailabilityZoneFilter
+        - RamFilter
+        - DiskFilter
+        - ComputeFilter
+        - ComputeCapabilitiesFilter
+        - ImagePropertiesFilter
+    IronicCleaningDiskErase: metadata
+    IronicCleaningNetwork: 9006334e-df2b-4bb2-8149-9ebb707285c6
+    #IronicCleaningNetwork: 96de7430-cd74-46d9-9861-4035569b2331 

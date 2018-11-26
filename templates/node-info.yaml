@@ -1,0 +1,10 @@
+parameter_defaults:
+  #OvercloudControllerFlavor: control
+  #OvercloudComputeFlavor: compute
+  #OvercloudSwiftStorageFlavor: swift-storage
+  OvercloudControllerFlavor: baremetal
+  OvercloudComputeFlavor: baremetal
+  #OvercloudSwiftStorageFlavor: baremetal
+  ControllerCount: 3
+  ComputeCount: 2
+  #ObjectStorageCount: 1

@@ -1,0 +1,97 @@
+parameter_defaults:
+    OctaviaCaCert: |
+      -----BEGIN CERTIFICATE-----
+      MIIFGTCCBAGgAwIBAgIBAzANBgkqhkiG9w0BAQsFADCBnDELMAkGA1UEBhMCS08x
+      CzAJBgNVBAgTAlNVMQ0wCwYDVQQHEwRTdXl1MRIwEAYDVQQKEwlyb2NrUExBQ0Ux
+      FTATBgNVBAsTDGxpbnV4IGtlcm5lbDEVMBMGA1UEAxMMcm9ja1BMQUNFIENBMQ8w
+      DQYDVQQpEwZzZXJ2ZXIxHjAcBgkqhkiG9w0BCQEWD3lqbGVlQGxpbnV4LmNvbTAe
+      Fw0xNzAzMTgxNjUyMDFaFw0yNzAzMTYxNjUyMDFaMIGYMQswCQYDVQQGEwJLTzEL                                          
+      MAkGA1UECBMCU1UxDTALBgNVBAcTBFN1eXUxEjAQBgNVBAoTCXJvY2tQTEFDRTEV                                          
+      MBMGA1UECxMMbGludXgga2VybmVsMQ8wDQYDVQQDEwZtYXN0ZXIxETAPBgNVBCkT                                          
+      CG1hc3Rlci0xMR4wHAYJKoZIhvcNAQkBFg95amxlZUBsaW51eC5jb20wggEiMA0G                                          
+      CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCyHTRPxYeT/HRMrsNL5yK0rvJTaxKo                                          
+      eSWEK691+uQzfs2dDSkB8yDUrPs6JcgK4N52PCobNAnBl92TNM99eJD/aQMJjd6m                                          
+      DQtxT+2M+CL3BuA8qRoy/FBxNVYKsPq3tQdASwttswqVLsSbLYWRVfLGLeqZaqFm                                          
+      JVs4MZBfabin2orrstaCt3rmRoOLbK8ikMARpuzsm+RtVa3R5qfmJRjGLvs/bzB0                                          
+      3je3ECHEcS6zPL/5OTlti5RdkBhmvcrWm38SFZXK5LI9n02SE0Hr+4ywSNHpGUKw                                          
+      fbv4MfdVklz8cGTjVN6OLuBswPGNGz7n4IWzDPnaFuTwi5S+3YkDh0LPAgMBAAGj                                          
+      ggFmMIIBYjAJBgNVHRMEAjAAMC0GCWCGSAGG+EIBDQQgFh5FYXN5LVJTQSBHZW5l                                          
+      cmF0ZWQgQ2VydGlmaWNhdGUwHQYDVR0OBBYEFOpQFQHRrq7KIDFgWbZi08cc3bnk                                          
+      MIHRBgNVHSMEgckwgcaAFDow8xxLzzRFyV9I04CtUKVvnS7YoYGipIGfMIGcMQsw                                          
+      CQYDVQQGEwJLTzELMAkGA1UECBMCU1UxDTALBgNVBAcTBFN1eXUxEjAQBgNVBAoT                                          
+      CXJvY2tQTEFDRTEVMBMGA1UECxMMbGludXgga2VybmVsMRUwEwYDVQQDEwxyb2Nr                                          
+      UExBQ0UgQ0ExDzANBgNVBCkTBnNlcnZlcjEeMBwGCSqGSIb3DQEJARYPeWpsZWVA                                          
+      bGludXguY29tggkAgO03eV9E1fEwEwYDVR0lBAwwCgYIKwYBBQUHAwIwCwYDVR0P                                          
+      BAQDAgeAMBEGA1UdEQQKMAiCBm1hc3RlcjANBgkqhkiG9w0BAQsFAAOCAQEAqRA9                                          
+      5K+PuumhAhXjnIbAqDkmixCVBUKpoJ6pIxL7KTjwR8Hp0lM9fXgbV6sZzThO//SF                                          
+      +nenZNahE194lAsJpWYsgO0TwL30SpVPvzWJPsblWyMK5zaJOgy3EYVrwi/gPUIU                                          
+      /TAoP/6mFUJ4z+O/UG5fsX6b0iOnB+ICZJCCnAN5NmGQS6vswBoVX1qj4tpJ+29O                                          
+      0lYqk/1NCsVV4yQJedl7h3GMPR5S1GE1zjLyq1+QghkdRXbDWoyURwqwdCzNEBg0                                          
+      pGP53aZXHk1nW0y/74USZ+ERVPBTc5gabHhhSuhJc7OvLVkEylafrFYH67M/L9Du                                          
+      YjuOxGE56Dr0oUQ+rw==                                 
+      -----END CERTIFICATE-----               
+
+    OctaviaCaKey: |
+      -----BEGIN CERTIFICATE-----
+      MIIExDCCA6ygAwIBAgIJAIDtN3lfRNXxMA0GCSqGSIb3DQEBCwUAMIGcMQswCQYD
+      VQQGEwJLTzELMAkGA1UECBMCU1UxDTALBgNVBAcTBFN1eXUxEjAQBgNVBAoTCXJv
+      Y2tQTEFDRTEVMBMGA1UECxMMbGludXgga2VybmVsMRUwEwYDVQQDEwxyb2NrUExB
+      Q0UgQ0ExDzANBgNVBCkTBnNlcnZlcjEeMBwGCSqGSIb3DQEJARYPeWpsZWVAbGlu
+      dXguY29tMB4XDTE3MDMxODE2Mjg0OFoXDTI3MDMxNjE2Mjg0OFowgZwxCzAJBgNV
+      BAYTAktPMQswCQYDVQQIEwJTVTENMAsGA1UEBxMEU3V5dTESMBAGA1UEChMJcm9j
+      a1BMQUNFMRUwEwYDVQQLEwxsaW51eCBrZXJuZWwxFTATBgNVBAMTDHJvY2tQTEFD
+      RSBDQTEPMA0GA1UEKRMGc2VydmVyMR4wHAYJKoZIhvcNAQkBFg95amxlZUBsaW51
+      eC5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDZU/7itM6nMXqe
+      aanile3wP4Safz0TCnBJlgQxSDQ32614X344U6wIwB9710IEFvaMwV1s7DPyWCE/
+      XgZN1y1VAIhw+dj7HzH4LtW6sJUciYTWrTcc5eGOsAaxld5Le6kxxxTGUnsaOusf
+      lVJns8rfWGQZbCJXGX1aNUh+Z5IVo57WYhaotX170d4Sm/Qb5EJm136stYGU1bAW
+      1mqrKxJTKHLaR2HWaskT9KIuBS5SFLYekA2eXpCqKSTig78nWZA3J5zHLMRYoXyk
+      hJ5A5b7Y2UXDGf0kHlpfj9+lvaP8Lrd4p0az0NoTX8QeUD/ux9wDHt6ekDV9O5Rh
+      T25jGB6nAgMBAAGjggEFMIIBATAdBgNVHQ4EFgQUOjDzHEvPNEXJX0jTgK1QpW+d
+      LtgwgdEGA1UdIwSByTCBxoAUOjDzHEvPNEXJX0jTgK1QpW+dLtihgaKkgZ8wgZwx
+      CzAJBgNVBAYTAktPMQswCQYDVQQIEwJTVTENMAsGA1UEBxMEU3V5dTESMBAGA1UE
+      ChMJcm9ja1BMQUNFMRUwEwYDVQQLEwxsaW51eCBrZXJuZWwxFTATBgNVBAMTDHJv
+      Y2tQTEFDRSBDQTEPMA0GA1UEKRMGc2VydmVyMR4wHAYJKoZIhvcNAQkBFg95amxl
+      ZUBsaW51eC5jb22CCQCA7Td5X0TV8TAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEB
+      CwUAA4IBAQBYsqlLjBJWjgLppVXii8OXNoDEY+z9LNRzb6iqDUeB2EQlSc/GQ+g/
+      +xWOxNYsgsSKSWJ6ypfhUQUgJLqdEysEl2BqmeDqpEIGTONN2rah/xjzyd5+rYdf
+      jcEqLIEjh5pktF2LCI4pMO+LmFKPY+cDXgHFbThegsswzK+Q6UZXINmgAcpwuE9r
+      gpHy4dKiZaQgIlW44ciVJkGoBabgQYiX6TcJBBG4MnVO6vttcfXJjwyk3+hibm+4
+      RR1j2a619sWHGNgJJkHFUTJfUMxP8b/MFjwTx9ImjDhBN0xBVrV1DegUyv/DyLB2
+      ck8Cn4wd7hFWyoNY2SXKxeafPE7uWv3a
+      -----END CERTIFICATE-----
+
+    OctaviaClient: |
+      -----BEGIN PRIVATE KEY-----
+      MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCyHTRPxYeT/HRM
+      rsNL5yK0rvJTaxKoeSWEK691+uQzfs2dDSkB8yDUrPs6JcgK4N52PCobNAnBl92T
+      NM99eJD/aQMJjd6mDQtxT+2M+CL3BuA8qRoy/FBxNVYKsPq3tQdASwttswqVLsSb
+      LYWRVfLGLeqZaqFmJVs4MZBfabin2orrstaCt3rmRoOLbK8ikMARpuzsm+RtVa3R
+      5qfmJRjGLvs/bzB03je3ECHEcS6zPL/5OTlti5RdkBhmvcrWm38SFZXK5LI9n02S
+      E0Hr+4ywSNHpGUKwfbv4MfdVklz8cGTjVN6OLuBswPGNGz7n4IWzDPnaFuTwi5S+
+      3YkDh0LPAgMBAAECggEAatlQL2atDZ7N2c6hQ+B1lnS41EgQWlbKpb5bNOh8i1PP
+      Xx6s8gl7MXpP/7L4jWYWrlErZURTcfp7prpwmrGAMmg5tTqRTYXXznMHa6DTwOM0
+      E8/R8rIgQ7meUy2WSixkHDKouXdFqvbyZLDrRqOLz01uRfiMuC1CyrQZCtPuPWrB
+      S5y/qOYlAc/VEHiTgBQEfqIaNIM71GfhumMbfob0ZpLm0YlAiA064NCHh2Un3BCF
+      z1MG2/ZOs/imQvcByXjIicm53il7w1wu07hfVp2AF3qzxmz+DD+zIWiFrcYBK/Gn
+      w3DCqtXVrrtkqXeAHJwejXRSzs09fceEXZDACpUZoQKBgQDkvsWVJLQo9sm6bhJo
+      luw2OVFCokmggz7WBXfdBORkWQ49MObkkCoz2OSHKDsLbAV+R/GhYdZu9w50z8Ha
+      QN/ljPpNLF7CJECpb+uA77bOl5jwYWloQi7YcL2zEd1T368kwG4ghFpWYhcODhgW
+      bgULs0WQfJWdLFdQ4qfYiJGB3wKBgQDHVhKd2j2mmTKtzaxzdSYKycpg6Hn/DRB+
+      TXjx2N6Yqg3bQg654+xhEsSEm7mkgRFwRt6gkBeOhTm0ca85CQxFTYkfPu6UDazl
+      LxylE8Gv9Bz8dfbQBiAqjlN5YH8iOJYRb2bSsg7uWrIzh69Ckst/CrTBIGaTIWjs
+      NvkQMoS9EQKBgCEvnDK7FHgs9a9acMlDvBlRz3w/Vzc2U1Nxj6Y9I3V7hhlSkuzu
+      DXFgMid5qrdJgLKFdYTYUOfgZ/SCf7lOWC1Req7flQ/NeqQaXKxkGr12OPYG6+f4
+      UhuMn7jvCpE0jpBiapfFG+YUbQvY952pcIn2BE2mBX68BB70Ay3jAlk5AoGBALPu
+      UO2l8uJwBNv3/INXqpgwX/qrvntoOowXuGVuIjfhwJI7BXnscBGL1FHzE1aXnrsf
+      bZO3nVvrjBQCTm2IakggXfcTYl3IHlnd9dhYhgwiqQuGG9zYuq5PPLAiV3/3Xhas
+      3T6wtWOYAKUdBCluwjuR2Wk+qviCPuiCEr35K/JRAoGBAJscOcp3+vgxtAj1X4LU
+      +MIDfOo+3g5vs8pzmWhCjVmZEcxJDKwU9WlGngpJcvOyZmYe4DDgxC6xOOzIJ0Vj
+      xOLmB+0vo8+b5SOpJvsauWiyszVQQbSfuAzSPsEtc0CG/Rk8ITxXNihW1Tf1wIZM
+      4izVzQUv6hR97Eo+bjf8fcgI
+      -----END PRIVATE KEY-----
+
+    OctaviaCaKeyPassphrase:
+        b28c519a-5880-4e5e-89bf-c042fc75225d
+
+    OctaviaGenerateCerts: false

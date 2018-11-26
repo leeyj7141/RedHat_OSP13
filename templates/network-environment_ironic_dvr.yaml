@@ -1,0 +1,87 @@
+#This file is an example of an environment file for defining the isolated
+#networks and related parameters.
+resource_registry:
+  # Network Interface templates to use (these files must exist)
+  OS::TripleO::Compute::Net::SoftwareConfig: /home/stack/templates/nic-configs/custom-configs/compute_ironic.yaml
+  #OS::TripleO::ComputeDVR::Net::SoftwareConfig: /home/stack/templates/nic-configs/custom-configs/compute_ironic.yaml
+  OS::TripleO::Controller::Net::SoftwareConfig: /home/stack/templates/nic-configs/custom-configs/controller_ironic.yaml
+  OS::TripleO::ObjectStorage::Net::SoftwareConfig: /home/stack/templates/nic-configs/custom-configs/swift-storage_ironic.yaml
+
+# -------------- DVR ---------------- #
+#  OS::TripleO::Services::ComputeNeutronL3Agent: ../puppet/services/neutron-l3-compute-dvr.yaml
+#  OS::TripleO::Services::ComputeNeutronMetadataAgent: ../docker/services/neutron-metadata.yaml
+# ------------------------------------#
+
+parameter_defaults:
+# ------------------------- time zone ------------------------------ #
+  #TimeZone: 'Japan'
+  TimeZone: 'Asia/Seoul'
+# ------------------------- fixed ip ------------------------------- #
+  ControlFixedIPs: [{'ip_address':'192.1.1.10'}]
+  InternalApiVirtualFixedIPs: [{'ip_address':'172.17.0.10'}]
+  PublicVirtualFixedIPs: [{'ip_address':'192.168.92.110'}]
+  StorageVirtualFixedIPs: [{'ip_address':'10.23.30.10'}]
+  StorageMgmtVirtualFixedIPs: [{'ip_address':'10.23.40.10'}]
+#  RedisVirtualFixedIPs: [{'ip_address':'172.16.0.8'}]
+# ------------------------------------------------------------------ # 
+
+# ------------------------- fixed ip ------------------------------- #
+  AdminPassword: adminpassword
+# ------------------------------------------------------------------ # 
+  # This section is where deployment-specific configuration is done
+  # CIDR subnet mask length for provisioning network
+  ControlPlaneSubnetCidr: '24'
+  # Gateway router for the provisioning network (or Undercloud IP)
+  ControlPlaneDefaultRoute: 192.1.1.1
+  EC2MetadataIp: 192.1.1.1  # Generally the IP of the Undercloud
+  # Customize the IP subnets to match the local environment
+  InternalApiNetCidr: 172.17.0.0/24
+  StorageNetCidr: 10.23.30.0/24
+  StorageMgmtNetCidr: 10.23.40.0/24
+  #StorageNetCidr: 172.18.0.0/24
+  #StorageMgmtNetCidr: 172.19.0.0/24
+  TenantNetCidr: 172.16.0.0/24
+  ExternalNetCidr: 192.168.0.0/16
+  # Customize the VLAN IDs to match the local environment
+  InternalApiNetworkVlanID: 20
+  StorageNetworkVlanID: 30
+  StorageMgmtNetworkVlanID: 40
+  TenantNetworkVlanID: 50
+  # Customize the IP ranges on each network to use for static IPs and VIPs
+  InternalApiAllocationPools: [{'start': '172.17.0.50', 'end': '172.17.0.80'}]
+  StorageAllocationPools: [{'start': '10.23.30.50', 'end': '10.23.30.80'}]
+  StorageMgmtAllocationPools: [{'start': '10.23.40.50', 'end': '10.23.40.80'}]
+  TenantAllocationPools: [{'start': '172.16.0.50', 'end': '172.16.0.80'}]
+  # Leave room if the external network is also used for floating IPs
+  ExternalAllocationPools: [{'start': '192.168.92.101', 'end': '192.168.92.130'}]
+  # Gateway router for the external network
+  ExternalInterfaceDefaultRoute: 192.168.0.1
+  # Uncomment if using the Management Network (see network-management.yaml)
+  ManagementNetCidr: 10.23.1.0/24
+  ManagementAllocationPools: [{'start': '10.23.1.50', 'end': '10.23.1.99'}]
+  # Use either this parameter or ControlPlaneDefaultRoute in the NIC templates
+  ManagementInterfaceDefaultRoute: 10.23.1.1
+  # Define the DNS servers (maximum 2) for the overcloud nodes
+  #DnsServers: ["10.23.1.1"]
+  DnsServers: ["1.1.1.1","8.8.8.8","8.8.4.4"]
+  # List of Neutron network types for tenant networks (will be used in order)
+  #NeutronNetworkType: 'geneve'
+  NeutronNetworkType: 'vxlan,vlan'
+  # The tunnel type for the tenant network (vxlan or gre). Set to '' to disable tunneling.
+  #NeutronTunnelTypes: 'geneve' # deprecate 됨. 
+  #NeutronTunnelTypes: 'vxlan'
+  # Neutron VLAN ranges per network, for example 'datacentre:1:499,tenant:500:1000':
+  NeutronNetworkVLANRanges: 'datacentre,tenant:1:1000,storage:10:70'
+  # Customize bonding options, e.g. "mode=4 lacp_rate=1 updelay=1000 miimon=100"
+  # for Linux bonds w/LACP, or "bond_mode=active-backup" for OVS active/backup.
+  BondInterfaceOvsOptions: "bond_mode=active-backup"
+  NeutronBridgeMappings: 'tenant:br-tenant,datacentre:br-ex,storage:br-com-bond1,baremetal:br-baremetal'
+  NeutronFlatNetworks: datacentre,baremetal
+  NeutronL3HA: false
+# -------------- DVR ---------------- #
+#  NeutronMechanismDrivers: ['openvswitch', 'l2population']
+#  NeutronEnableL2Pop: 'True'
+#  NeutronEnableDVR: true
+#  NeutronL3AgentMode: 'dvr_snat'
+#  NovaReservedHostMemory: 2560
+# ----------------------------------- #
